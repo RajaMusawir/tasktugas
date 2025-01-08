@@ -121,7 +121,7 @@ const FoodHome = ({navigation}) => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{borderBottomWidth: StyleSheet.hairlineWidth,marginTop:9 ,backgroundColor:'#145343'}}></View>
+        <View style={{borderBottomWidth: StyleSheet.hairlineWidth,marginTop:9 ,backgroundColor:theme.text}}></View>
         <TextInput
           style={[styles.searchBar, { backgroundColor: theme.searchBar, color: theme.searchBarText }]}
           placeholder="Search for restaurant and groceries"
