@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "643078248826",
+    "project_id": "task-tugas",
+    "storage_bucket": "task-tugas.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643078248826:android:694ef76e86035183045ec3",
+        "android_client_info": {
+          "package_name": "com.tasktugas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYLNZGI8MTlzzRRXDHZRrUDfZcrQ-fTsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

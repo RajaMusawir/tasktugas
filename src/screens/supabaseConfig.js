@@ -1,0 +1,2 @@
+export const SUPABASE_URL = 'https://qpcctsdelglfxlujvvsy.supabase.co';
+export const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFwY2N0c2RlbGdsZnhsdWp2dnN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzIxMTcxMzUsImV4cCI6MjA0NzY5MzEzNX0.BbbTZ21D1F7c9N26u8KYItQlO2s2ZybXxNt1YpaZJno'

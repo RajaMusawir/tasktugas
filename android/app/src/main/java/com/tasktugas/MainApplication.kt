@@ -1,6 +1,7 @@
 package com.tasktugas
 
 import android.app.Application
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
