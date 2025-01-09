@@ -9,3 +9,5 @@ export const setTheme = (theme) => ({
   type: SET_THEME,
   payload: theme,
 });
+
+export const USER_LIST = 'USER_LIST'
