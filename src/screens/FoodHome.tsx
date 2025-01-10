@@ -103,8 +103,9 @@ const FoodHome = ({navigation}) => {
   const { theme } = useSelector((state) => state.theme);
   console.log(theme);
   const userList = useSelector((state) => state.userList)
-  const users = userList[0].users;
-console.log(users);
+  {userList &&
+    console.log(userList);
+  }
   
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: theme.mainBackground }]}>

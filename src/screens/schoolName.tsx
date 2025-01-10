@@ -65,7 +65,7 @@ const SchoolName = ({ navigation }) => {
       } else {
         setTimeout(() => {
           navigation.navigate('SuccessPage');
-        }, 4000);
+        }, 2000);
       }
     };
 
