@@ -118,8 +118,8 @@ const MixAuth = ({ navigation }) => {
         Alert.alert('Error', 'Failed to create user. Please try again.');
       }
     }
-  };
-
+  }
+  
   const saveCredentials = async (email, password) => {
     try {
       await AsyncStorage.setItem('email', email);
