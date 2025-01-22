@@ -8,8 +8,10 @@ buildscript {
         kotlinVersion = "1.9.24"
     }
     repositories {
+        gradlePluginPortal()
         jcenter()
         google()
+        maven { url 'https://maven.onesignal.com' }
     }
     dependencies {
         classpath("com.android.tools.build:gradle:8.6.0")

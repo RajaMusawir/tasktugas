@@ -4,7 +4,8 @@ import { View, Text, StyleSheet, TouchableOpacity, Image, StatusBar, Dimensions 
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSelector } from 'react-redux';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { useQuery ,gql } from '@apollo/client';
 
 const { width, height } = Dimensions.get('window');
 
@@ -13,6 +14,13 @@ const Cart = ({ route, navigation }) => {
   const [priceGg, setPriceGg] = useState();
   const cart = useSelector((state) => state.cart.cart);
 
+  const CHARACTER_GRAPH = gql`
+  query {
+  hello
+}
+`
+  const {data, loading} = useQuery(CHARACTER_GRAPH)
+  console.log("DATAAAAAAAA", data);
   useEffect(() => {
     if (cart.length > 0) {
       const numericPrice = parseFloat(cart[0]?.price?.replace("Rs.", "").replace(",", "").trim());
@@ -22,6 +30,9 @@ const Cart = ({ route, navigation }) => {
     }
   }, [cart]);
 
+
+
+  
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar backgroundColor={'white'} />
@@ -47,11 +58,11 @@ const Cart = ({ route, navigation }) => {
                 </View>
                 <View style={styles.adder}>
                   <TouchableOpacity onPress={() => setCount(count > 0 ? count - 1 : 0)} style={styles.iconContainer}>
-                    <Icon name="trash-outline" size={20} color="black" />
+                    <Ionicons name="trash-outline" size={20} color="black" />
                   </TouchableOpacity>
                   <Text style={styles.count}>{count}</Text>
                   <TouchableOpacity onPress={() => setCount(count + 1)} style={styles.iconContainer}>
-                    <Icon name="add-outline" size={20} color="black" />
+                    <Ionicons name="add-outline" size={20} color="black" />
                   </TouchableOpacity>
                 </View>
               </View>
@@ -67,7 +78,7 @@ const Cart = ({ route, navigation }) => {
                 <View style={styles.row}>
                   <Text style={styles.label}>Platform Fee</Text>
                   <View style={styles.icon}>
-                    <Icon name="information-circle-outline" size={20} color="black" />
+                    <Ionicons name="information-circle-outline" size={20} color="black" />
                   </View>
                   <Text style={styles.platformFee}>Rs. 9.99</Text>
                 </View>

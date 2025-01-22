@@ -85,6 +85,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = [
+            onesignal_app_id: "5d6722e8-1587-435f-9252-8ee5f5e53bac",
+        ]
     }
     signingConfigs {
         debug {
@@ -114,7 +117,7 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:33.7.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation project(':react-native-vector-icons')
-
+    implementation 'com.google.firebase:firebase-messaging:23.1.1'
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {

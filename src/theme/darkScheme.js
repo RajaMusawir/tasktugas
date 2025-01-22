@@ -5,6 +5,7 @@ const darkScheme = {
      header : "#1E1E1E",
      searchBar: '#2A2A2A',
      statusBar: "#1E1E1E",
+     statusBarStyle: 'light-content',
      searchBarText: "#FFFFFF",
      searchBarPlace: "#B0B0B0",
      iconHeader: "#FFFFFF",

@@ -3,6 +3,7 @@ export const lightScheme = {
      header : "#FFFFFF",
      searchBar: '#F0F0F0',
      statusBar: "white",
+     statusBarStyle: "dark-content",
      searchBarText: "#000000",
      searchBarPlace: "#757575",
      iconHeader: "#000000",

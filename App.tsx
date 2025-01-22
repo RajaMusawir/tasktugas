@@ -36,11 +36,17 @@ import AddItem from "./src/screens/AddItem";
 import Cart from "./src/screens/Cart";
 import store from './components/redux/store'
 import { setTheme } from "./components/redux/action";
+import OneSignal from 'react-native-onesignal';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
+import {ApolloClient, InMemoryCache , ApolloProvider} from '@apollo/client'
 
+const client = new ApolloClient ({
+  uri : "http://192.168.100.241:4000/graphql",
+  cache : new InMemoryCache()
+})
 
 function BottomTabs() {
   return (
@@ -106,7 +112,6 @@ function BottomTabs() {
   );
 }
 const App = () => {
-  
   useEffect(() => {
     initThemeListener();
   }, []);
@@ -114,6 +119,7 @@ const App = () => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Provider store={store}>
+      <ApolloProvider client={client}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName="SchoolName">
           <Stack.Screen 
@@ -225,6 +231,7 @@ const App = () => {
         </Stack.Navigator>
         
       </NavigationContainer>
+      </ApolloProvider>
       </Provider>
     </GestureHandlerRootView>
   );

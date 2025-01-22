@@ -109,7 +109,7 @@ const FoodHome = ({navigation}) => {
   
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: theme.mainBackground }]}>
-      <StatusBar backgroundColor={theme.statusBar} barStyle="light-content" />
+      <StatusBar backgroundColor={theme.statusBar} barStyle={theme.statusBarStyle} />
       <View style={[styles.safeHeader, { backgroundColor: theme.header }]}>
       <Image source={require('./../../assets/new_logo.png')} style={{ height: 65, width: 35, left:15, top:30, resizeMode:'center'}} />
         <View>
