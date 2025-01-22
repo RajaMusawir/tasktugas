@@ -18,7 +18,8 @@ const Cart = ({ route, navigation }) => {
   query {
   hello
 }
-`
+`;
+
   const {data, loading} = useQuery(CHARACTER_GRAPH)
   console.log("DATAAAAAAAA", data);
   useEffect(() => {
