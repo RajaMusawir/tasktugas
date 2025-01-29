@@ -44,7 +44,7 @@ const Tab = createBottomTabNavigator();
 import {ApolloClient, InMemoryCache , ApolloProvider} from '@apollo/client'
 
 const client = new ApolloClient ({
-  uri : "http://192.168.100.241:4000/graphql",
+  uri : "http://192.168.100.116:4000/graphql",
   cache : new InMemoryCache()
 })
 

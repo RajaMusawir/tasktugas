@@ -1,8 +1,10 @@
 const { buildSchema } = require('graphql');
 const schema = buildSchema(`
+  scalar Upload
   type Query {
     hello: String         
-    user(id: ID!): User           
+    program: String
+    user(id: ID!): User         
   }
   type Mutation {
     addUser(name: String!, email: String!): User 
@@ -10,7 +12,9 @@ const schema = buildSchema(`
   type User {
     id: ID
     name: String
-    email: String             
+    email: String
+    photo: String     
+}        
 `);
 
 module.exports = schema;
